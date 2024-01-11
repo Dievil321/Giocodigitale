@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.pm.ActivityInfo
+import android.content.res.Configuration
 import android.net.Uri
 
 import android.view.View
@@ -38,6 +39,11 @@ class MainActivity : AppCompatActivity() {
             webView.loadUrl(webViewUrl)
         }
     }
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        // Обработайте изменение ориентации здесь, если необходимо
+    }
+
 
     override fun onSaveInstanceState(outState: Bundle) {
         // Сохранение состояния WebView при перевороте экрана
